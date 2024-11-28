@@ -1,0 +1,56 @@
+body {
+    background-image: url(https://i.pinimg.com/originals/ca/63/58/ca6358a3344b7e4cd665a09216320b8a.jpg);
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.earth-container {
+    position: relative;
+}
+
+.earth {
+    display: block;
+    margin: auto;
+    height: 250px;
+    width: 250px;
+    animation: earth-spin 15s linear infinite; /* Earth rotation animation */
+}
+
+@keyframes earth-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px; /* Orbit diameter */
+    height: 400px;
+    margin-top: -200px; /* Half of the orbit's height */
+    margin-left: -200px; /* Half of the orbit's width */
+    animation: orbit 15s linear infinite; /* Moon orbit animation */
+}
+
+@keyframes orbit {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: 50px;
+}
